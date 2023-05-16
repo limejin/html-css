@@ -10,7 +10,7 @@
       <span class="title">영화📽</span>
     </header>
     <main>
-      <div class="leftside">
+      <div class="leftside" id="leftside">
         <button type="'button" class="add-button" id="addMovie">추가</button>
         <span>라일라일크로커다일</span>
         <span>아바타: 물의 길</span>
@@ -18,7 +18,7 @@
         <span>던전 앤 드래곤: 도적들의 명예</span>
         <span>파벨만스</span>
       </div>
-      <section class="container">
+      <section class="container" id="container">
         <div class="card">
           <img src="./images/movie1.jpg" alt="라일라일크로커다일" />
           <span class="movie-title">&lt;라일라일크로커다일&gt;</span>
@@ -48,5 +48,38 @@
         </div>
       </section>
     </main>
+    <div class="modal-background" id="modal">
+      <form class="modal" id="addMovieForm">
+        <span class="modal-close" id="closeModal">X</span>
+        <label for="name" class="label">이름</label>
+        <input
+          id="name"
+          type="text"
+          placeholder="가디언즈 오브 갤럭시"
+          class="input"
+          maxlength="20"
+          required
+        />
+        <label for="image" class="label">이미지</label>
+        <input
+          id="image"
+          type="text"
+          placeholder="URL"
+          class="input"
+          required
+        />
+        <label for="review" class="label">리뷰</label>
+        <input
+          id="review"
+          type="text"
+          placeholder="감동적이고 재밌었어요!"
+          class="input"
+          required
+        />
+        <button type="submit" class="submit-button">저장</button>
+      </form>
+    </div>
+    <script src="./modal.js"></script>
+    <script src="./addMovie.js"></script>
   </body>
 </html>
